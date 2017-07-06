@@ -1,0 +1,74 @@
+@import "common";
+
+header{
+  background: #ffffff;
+  .profile{
+    padding: .3rem;
+    border-bottom: .01rem solid @bgrey;
+    img{
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: .05rem;
+    }
+  }
+  .signIn{
+    margin-top: .5rem;
+    i{
+      color:#ff3232;
+    }
+  }
+  .credits{
+    padding:.3rem 0;
+    li{
+      display: inline-block;
+      width:50%;
+      &:first-child{
+        border-right: .01rem solid @bgrey;
+      }
+    }
+    .exchange{
+      button{
+        position: absolute;
+        top:50%;
+        margin-left:-.85rem;
+        margin-top:-.1rem;
+        left: 50%;
+      }
+    }
+  }
+}
+
+.btnSm{
+  width: 1.7rem;
+  height:.5rem;
+  font-size: .24rem;
+  color:@baseg;
+  border-radius: .25rem;
+  border: .01rem solid @baseg;
+}
+
+section{
+  .infoWwrapper{
+    padding-left:.6rem;
+  }
+  .myactivity{
+    background: url("../images/order_g.png") no-repeat left center;
+    background-size: .28rem .36rem;
+  }
+  .myshare{
+    background: url("../images/share_g.png") no-repeat left center;
+    background-size: .33rem .28rem;
+  }
+  .mycollect{
+    background: url("../images/collect_g.png") no-repeat left center;
+    background-size: .36rem .35rem;
+  }
+  .feedback{
+    background: url("../images/feedback_g.png") no-repeat left center;
+    background-size: .37rem .35rem;
+  }
+  .dot{
+    right: .68rem;
+    top:.3rem;
+  }
+}

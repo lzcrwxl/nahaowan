@@ -1,0 +1,121 @@
+@import "common";
+header{
+  background: #ffffff;
+  padding: .3rem .4rem .4rem .2rem;
+  border-bottom: .01rem solid @bgrey;
+  h3{
+    font-size: .32rem;
+    line-height:.48rem;
+  }
+}
+section{
+  .attend{
+    li{
+      border-bottom: .01rem solid @bgrey;
+      padding:.6rem 0 .2rem;
+    }
+    .arrow{
+      &:after{
+        top:.65rem;
+        margin-top:0;
+      }
+    }
+    .infoItem{
+      width: 1.4rem;
+      display: inline-block;
+    }
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: #d9d9d9;
+    }
+    input:-moz-placeholder, textarea:-moz-placeholder {
+      color: #d9d9d9;
+    }
+    input{
+      width: 5.5rem;
+    }
+    .loaction{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.saveInfo{
+  height: 1.5rem;
+  line-height:1.5rem;
+  .switchLabel{
+    position: absolute;
+    width: 1.02rem;
+    height: .62rem;
+    border-radius: .31rem;
+    background: #53d769;
+    right: .3rem;
+    top:.43rem;
+    .switchButton{
+      position: absolute;
+      background: #ffffff;
+      border-radius: 50%;
+      width: .56rem;
+      height: .56rem;
+      right: 0.03rem;
+      top:.03rem;
+    }
+  }
+}
+.addPeople{
+  text-align: center;
+  margin: .2rem auto;
+}
+.addBtn{
+  width: 2.3rem;
+  height: .8rem;
+  line-height: .8rem;
+  border-radius: .4rem;
+  border: .03rem solid @baseg;
+  color:@baseg;
+  font-size: .28rem;
+}
+.rules{
+  margin-right:.3rem;
+  float: right;
+  font-size: .24rem;
+  color: #999999;
+  background: url("../img/tips.png")no-repeat;
+  background-size: .24rem;
+  padding-left:.35rem;
+}
+.discount{
+  li{
+    &:before{
+      content: '';
+      display: inline-block;
+      width: .2rem;
+      height: .2rem;
+      background: @baseg;
+      border-radius: 50%;
+      margin-right:.2rem;
+    }
+  }
+}
+.btnItem{
+  width: 100%;
+  li{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+  }
+  .btnLf{
+    padding:.2rem .2rem .3rem;
+  }
+  .btnRt{
+    a{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background: @baseg;
+      font-size: .36rem;
+      line-height:1.3rem;
+      color:#ffffff;
+    }
+  }
+}

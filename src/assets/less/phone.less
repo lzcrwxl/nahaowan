@@ -1,0 +1,41 @@
+@import "common";
+
+.phoneBar{
+  margin:.4rem .3rem;
+  border: .01rem dashed #c8c8c8;
+  text-align: center;
+  font-size: .32rem;
+  color: #999999;
+  height: .8rem;
+  line-height: .8rem;
+}
+.editPhone{
+  background: #ffffff;
+  border-top:.01rem solid @bgrey;
+  border-bottom:.01rem solid @bgrey;
+  li{
+    height: .9rem;
+    line-height:.9rem;
+    &:first-child{
+      border-bottom: .01rem solid @bgrey;
+    }
+    .countryCode{
+      width: 1.76rem;
+      text-align: center;
+      border-right: .01rem solid @bgrey;
+      span{
+        display: inline-block;
+        background: url("../img/arrowDn.png") no-repeat right center;
+        background-size: .21rem .12rem;
+        padding-right: .4rem;
+      }
+    }
+    input{
+      height: 100%;
+      padding: 0 .4rem;
+      width: 5.4rem;
+    }
+    .phoneNum{
+    }
+  }
+}

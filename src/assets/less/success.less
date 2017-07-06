@@ -1,0 +1,54 @@
+@import "common";
+.payment{
+  .iconBase{
+    margin-top: 1rem;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 2.44rem;
+    width: 100%;
+    height:2.44rem;
+  }
+  .iconsucc{
+    background-image: url("../img/success.png");
+  }
+  .iconFailed{
+    .iconBase;
+    background-image: url("../img/failed.png");
+  }
+  p{
+    margin-top:.5rem;
+  }
+  .btnBox{
+    margin-top: 1rem;
+  }
+}
+body{
+  background: #ffffff;
+}
+.btncfm{
+  display: inline-block;
+  width: 2.5rem;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .28rem;
+  border-radius: .4rem;
+}
+.btnBox{
+  text-align: center;
+}
+.check{
+  color: #ffffff;
+  background: @baseg;
+}
+.return{
+  border: .03rem solid @baseg;
+  color:@baseg;
+}
+.repay{
+  color: #ffffff;
+  background: #f35f44;
+}
+.returnFailed{
+  border: .03rem solid #f35f44;
+  color:#f35f44;
+}
