@@ -18,42 +18,45 @@ console.log(PersonalCenter)
 const router = new VueRouter({
       mode: 'history',
       base: __dirname,
+      scrollBehavior:()=>({y:0}),
       routes: [
-        {
-          path: '/onSale', component: ProductList,
-          children: [
-            // { path: '', component: Detail },
-            {
-              path: 'detail',
-              component: Detail,
-              children:[
-                {
-                  path:'destination',
-                  component:Destination
-                }
-              ]
-            },
-            {
-              path: 'detail02',
-              component: Detail02
-            }
-          ]
-        },
-        {path: '/total', component: ProductList02},
-        {path: '/filter', component: ProductList03},
+
         {
           path: '/',
-          redirect: '/onSale'
+          redirect: '/home'
         },
         {
           path: '*',
-          redirect: '/onSale'
+          redirect: '/home'
         },
         {
-          path:'/home',component:SectionView
+          path: '/home', component: SectionView,
+          children: [
+            {
+              path: '/onSale', component: ProductList,
+              children: [
+                {
+                  path: 'detail',
+                  component: Detail,
+                  children: [
+                    {
+                      path: 'destination',
+                      component: Destination
+                    }
+                  ]
+                },
+                {
+                  path: 'detail02',
+                  component: Detail02
+                }
+              ]
+            },
+            {path: '/total', component: ProductList02},
+            {path: '/filter', component: ProductList03},
+          ]
         },
         {
-          path:'/personalCenter',component:PersonalCenter
+          path: '/personalCenter', component: PersonalCenter
         }
       ]
     }

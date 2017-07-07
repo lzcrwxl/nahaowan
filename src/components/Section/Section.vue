@@ -1,6 +1,6 @@
 <template>
   <section>
-    <ul class="navbar" v-show="showNav">
+    <ul class="navbar" v-show="headerShow">
       <router-link class="item" to="/onSale" tag="li">
         特价
       </router-link>
@@ -17,12 +17,17 @@
 
 <script>
   import Bus from '../../bus'
+  import {mapGetters,mapActions} from 'vuex'
+
   export default{
     data(){
       return{
         showNav:true
       }
     },
+    computed:mapGetters([
+      'headerShow'
+    ]),
     methods: {
 
     },
@@ -32,12 +37,5 @@
     created(){
 
     },
-    computed(){
-      console.log(this.showNav);
-      Bus.$on('ok', function (msg) {
-        this.showNav=msg;//msg==false
-        console.log(this.showNav);//false
-      });
-    }
   }
 </script>

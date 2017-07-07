@@ -57,19 +57,7 @@
       <h6 class="actTitle">近期活动推荐</h6>
       <ul class="mt30 activities pl20">
         <li>
-          <a href="#" class="infoWwrapper g6">
-            <span class="introduction ml30">【跟团游】【特卖！夜游/日游上海纯玩一日游！asdasdasdasd</span>
-            <span class="pricing"><i>￥360</i>&nbsp;起</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="infoWwrapper g6">
-            <span class="introduction ml30">【跟团游】【特卖！夜游/日游上海纯玩一日游！asdasdasdasd</span>
-            <span class="pricing"><i>￥360</i>&nbsp;起</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="infoWwrapper g6">
+          <a href="#" class=" g6">
             <span class="introduction ml30">【跟团游】【特卖！夜游/日游上海纯玩一日游！asdasdasdasd</span>
             <span class="pricing"><i>￥360</i>&nbsp;起</span>
           </a>

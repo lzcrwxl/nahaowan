@@ -20,12 +20,12 @@
       <div class="showBar fix">
         <ul class="infoBox">
           <li class="rel forward">
-            <a href="#" class="infoWwrapper g3 f30 myactivity">
+            <a href="#" class="infoWrapper g3 f30 myactivity">
               我的活动:
             </a>
-            <span class="r dot">1</span>
+            <span class="r dot" v-show="dots">1</span>
           </li>
-          <li class="rel forward">
+         <!-- <li class="rel forward">
             <a href="#" class="infoWwrapper g3 f30 myshare">
               我的分享:
             </a>
@@ -39,31 +39,10 @@
             <a href="#" class="infoWwrapper g3 f30 feedback">
               意见反馈:
             </a>
-          </li>
+          </li>-->
         </ul>
-
       </div>
     </section>
-    <footer>
-      <ul class="footList">
-        <li class="home">
-          <a href="#">
-            <dl>
-              <dt></dt>
-              <dd class="f18 g2c">首页</dd>
-            </dl>
-          </a>
-        </li>
-        <li class="my">
-          <a href="#">
-            <dl>
-              <dt></dt>
-              <dd class="f18 g9">我的</dd>
-            </dl>
-          </a>
-        </li>
-      </ul>
-    </footer>
   </div>
 </template>
 
@@ -71,6 +50,10 @@
   import '../../assets/less/personalInfo.less';
 
   export default{
-
+    data(){
+      return{
+        dots:true
+      }
+    }
   }
 </script>

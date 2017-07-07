@@ -28,8 +28,8 @@
 <!--返回按钮-->
 <script>
   import Vue from 'vue'
-  import '../../assets/less/detail.less'
   import '../../assets/css/swiper-3.4.1.min.css'
+  import '../../assets/less/detail.less';
   import '../../assets/js/jquery.min'
   import Swiper from '../../assets/js/swiper-3.4.1.jquery.min'
   import Introduction from './introduction.vue'
@@ -83,6 +83,7 @@
     },
     mounted(){
       this.lunbo()
+      this.fetchData();
     },
     computed: {},
     methods: {
@@ -96,7 +97,11 @@
           })
         })
       },
-
+      fetchData(){
+        this.$http.get('src/data/detail.json').then(function (res) {
+          console.log(res)
+        }).catch((err)=>console.log(err))
+      }
     },
     components: {
       Introduction,Info
