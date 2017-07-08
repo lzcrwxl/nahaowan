@@ -11,4 +11,10 @@ export default {
   hideFooter:({commit})=>{
     commit('hideFooter')
   },
+  showCenter:({commit})=>{
+    commit('showCenter')
+  },
+  hideCenter:({commit})=>{
+    commit('hideCenter')
+  },
 }

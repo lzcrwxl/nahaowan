@@ -33,14 +33,14 @@
     },
     methods:{
       headerChange(path){
-        if (path== 'personalCenter' || path == 'onSale/detail') {
+        if (path== 'personalCenter' || path == 'onSale/detail'||path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected') {
           this.$store.dispatch('hideHeader')
         } else {
           this.$store.dispatch('showHeader')
         }
       },
       footerChange(path){
-        if (path == 'onSale/detail') {
+        if (path == 'onSale/detail'||path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected') {
           this.$store.dispatch('hideFooter')
         } else {
           this.$store.dispatch('showFooter')

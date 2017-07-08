@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Introduction :banner="lbt" :tips="tips"></Introduction>
+    <Introduction :banner="lbtData" :tips="tipsData"></Introduction>
     <Info :avators="avators"></Info>
     <footer>
       <a href="#" class="service">
@@ -28,78 +28,38 @@
 <!--返回按钮-->
 <script>
   import Vue from 'vue'
-  import '../../assets/css/swiper-3.4.1.min.css'
   import '../../assets/less/detail.less';
-  import '../../assets/js/jquery.min'
-  import Swiper from '../../assets/js/swiper-3.4.1.jquery.min'
   import Introduction from './introduction.vue'
   import Info from './Info.vue'
+
   export default{
     data(){
       return {
-        lbt: [
-          {
-            'imgs': require('../../assets/images/detail/banner.png')
-          },
-          {
-            'imgs': require('../../assets/images/detail/banner.png')
-          },
-          {
-            'imgs': require('../../assets/images/detail/banner.png')
-          },
-        ],
-        tips: [
-          {text: '新人线路难度较低'},
-          {text: '新人线路'},
-          {text: '新人线路难度较低'},
-          {text: '新人线路'},
-          {text: '新人线路'},
-          {text: '新人线路难度较低'},
-        ],
-        avators:[
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-          {
-            'imgs':require('../../assets/images/avator.png')
-          },
-        ]
+        lbtData: {},
+        tipsData:{},
+        avators:{}
       }
     },
     mounted(){
-      this.lunbo()
       this.fetchData();
     },
+    watch:{
+      $route(to){
+        var reg=/detail/;
+        console.log(to.path);
+        if (reg.test(to.path)){
+          console.log(reg);
+        }
+      }
+    },
     computed: {},
-    methods: {
-      lunbo(){
-        $(function () {
-          var mySwiper = new Swiper('.swiper-container', {
-            loop: true,
-            // 如果需要分页器
-            pagination: '.swiper-pagination',
-            autoplay: 5000
-          })
-        })
-      },
+    methods:{
       fetchData(){
-        this.$http.get('src/data/detail.json').then(function (res) {
-          console.log(res)
+        let _this=this;
+        this.$http.get('/src/data/detail.json').then(function (res) {
+          _this.tipsData=res.data.tips;
+          _this.lbtData=res.data.banner;
+          _this.avators=res.data.avators;
         }).catch((err)=>console.log(err))
       }
     },

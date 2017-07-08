@@ -7,10 +7,13 @@ import ProductList from './components/Section/ProductList.vue'
 import ProductList02 from './components/Section/ProductList02.vue'
 import ProductList03 from './components/Section/ProductList03.vue'
 import Detail from './components/detail/detail.vue';
-import Detail02 from './components/detail/detail02.vue';
 import Destination from './components/detail/Destination.vue';
 import SectionView from './components/Section/Section.vue'
 import PersonalCenter from './components/personalCenter/personalCenter.vue'
+import myCol from './components/personalCenter/myCollected.vue'
+import myShare from './components/personalCenter/myShare.vue'
+import feedback from './components/personalCenter/feedback.vue'
+import myAct from './components/personalCenter/myAct.vue'
 
 Vue.use(VueRouter)
 
@@ -20,7 +23,6 @@ const router = new VueRouter({
       base: __dirname,
       scrollBehavior:()=>({y:0}),
       routes: [
-
         {
           path: '/',
           redirect: '/home'
@@ -45,10 +47,6 @@ const router = new VueRouter({
                     }
                   ]
                 },
-                {
-                  path: 'detail02',
-                  component: Detail02
-                }
               ]
             },
             {path: '/total', component: ProductList02},
@@ -56,7 +54,25 @@ const router = new VueRouter({
           ]
         },
         {
-          path: '/personalCenter', component: PersonalCenter
+          path: '/personalCenter', component: PersonalCenter,
+          children:[
+            {
+              path: 'myAct',
+              component: myAct,
+            },
+            {
+              path: 'myCollected',
+              component: myCol,
+            },
+            {
+              path: 'myShare',
+              component: myShare,
+            },
+            {
+              path: 'feedback',
+              component: feedback,
+            },
+          ]
         }
       ]
     }

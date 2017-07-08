@@ -45,9 +45,6 @@
       <ul class="tripList">
         <li v-for="(item,index) in list" :class="{'trip-active':(selected==index)}"
             :key="item"><a @click.stop.prevent="change(index)">{{item.text}}</a></li>
-        <!--<li><a href="#">详细行程</a></li>-->
-        <!--<li><a href="#">费用说明</a></li>-->
-        <!--<li><a href="#">预订须知</a></li>-->
       </ul>
       <keep-alive>
         <component :is="currentView"></component>

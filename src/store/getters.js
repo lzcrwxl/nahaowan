@@ -4,5 +4,8 @@ export default {
   },
   footerShow:(state)=>{
     return state.footer
-  }
+  },
+  centerShow:(state)=>{
+    return state.center
+  },
 }

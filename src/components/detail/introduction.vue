@@ -23,19 +23,29 @@
 </template>
 
 <script>
+  import '../../assets/css/swiper-3.4.1.min.css'
+  import '../../assets/js/jquery.min'
+  import Swiper from '../../assets/js/swiper-3.4.1.jquery.min'
   export default{
     data(){
-      return {
-//        tips: [
-//          {text: '新人线路难度较低'},
-//          {text: '新人线路'},
-//          {text: '新人线路难度较低'},
-//          {text: '新人线路'},
-//          {text: '新人线路'},
-//          {text: '新人线路难度较低'},
-//        ],
-      }
+      return {}
     },
-    props:['banner','tips']
+    created(){
+      this.lunbo()
+    },
+    methods: {
+      lunbo(){
+        this.$nextTick(()=>{
+          console.log(111);
+          var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            // 如果需要分页器
+            pagination: '.swiper-pagination',
+            autoplay: 1000
+          })
+        })
+      },
+    },
+    props: ['banner', 'tips']
   }
 </script>

@@ -2,7 +2,8 @@ import getters from './getters'
 
 const state={
   header:true,
-  footer:true
+  footer:true,
+  center:true
 }
 const mutations={
   showHeader(state){
@@ -16,6 +17,12 @@ const mutations={
   },
   hideFooter(state){
     state.footer=false
+  },
+  showCenter(state){
+    state.center=true
+  },
+  hideCenter(state){
+    state.center=false
   }
 }
 export default {

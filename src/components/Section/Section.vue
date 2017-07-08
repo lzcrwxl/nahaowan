@@ -11,29 +11,27 @@
         活动筛选
       </router-link>
     </ul>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </section>
 </template>
 
 <script>
   import Bus from '../../bus'
-  import {mapGetters,mapActions} from 'vuex'
+  import {mapGetters, mapActions} from 'vuex'
 
   export default{
     data(){
-      return{
-        showNav:true
+      return {
+        showNav: true
       }
     },
-    computed:mapGetters([
+    computed: mapGetters([
       'headerShow'
     ]),
-    methods: {
-
-    },
-    watch:{
-
-    },
+    methods: {},
+    watch: {},
     created(){
 
     },

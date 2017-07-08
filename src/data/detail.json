@@ -1,8 +1,44 @@
-[
-  {text: '新人线路难度较低'},
-  {text: '新人线路'},
-  {text: '新人线路难度较低'},
-  {text: '新人线路'},
-  {text: '新人线路'},
-  {text: '新人线路难度较低'},
-]
+{
+  "tips": [
+    {
+      "text": "新人难度"
+    },
+    {
+      "text": "新人难度"
+    },
+    {
+      "text": "新人难度"
+    },
+    {
+      "text": "新人难度"
+    },
+    {
+      "text": "新人难度"
+    },
+    {
+      "text": "新人难度"
+    },
+    {
+      "text": "新人难度"
+    }
+  ],
+  "banner": [
+    {
+      "imgs": "../../static/images/detail/banner.png"
+    },
+    {
+      "imgs": "../../static/images/detail/banner.png"
+    },
+    {
+      "imgs": "../../static/images/detail/banner.png"
+    }
+  ],
+  "avators":[
+    {
+      "imgs":"../../static/images/avator.png"
+    },
+    {
+      "imgs":"../../static/images/avator.png"
+    }
+  ]
+}
