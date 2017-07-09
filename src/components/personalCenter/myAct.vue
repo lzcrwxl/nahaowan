@@ -75,7 +75,7 @@
         <p class="f30">您还没有相关订单</p>
       </div>
     </section>
-    <div class="cancelOrder">
+    <div class="cancelOrder dn">
       <div class="btnBar">
         <a href="#" class="g9">取消</a>
         <a href="#" class="g3 r">确定</a>
@@ -87,7 +87,7 @@
         <li><a href="#" class="f32 g6 mt20 mb80">其他原因</a></li>
       </ul>
     </div>
-    <div class="module"></div>
+    <div class="module dn"></div>
   </div>
 </template>
 <style>

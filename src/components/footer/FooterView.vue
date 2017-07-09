@@ -1,28 +1,39 @@
 <template>
   <footer>
     <ul class="footList">
-      <li class="home">
-        <router-link to="/home" active-class="active">
+        <router-link to="/home" @click.native="homeSel" :class="{homeUnsel:notHome}" class="home" tag="li">
           <dl>
             <dt></dt>
             <dd class="f18 g9">首页</dd>
           </dl>
         </router-link>
-      </li>
-      <li class="my">
-        <router-link to="/personalCenter">
+        <router-link to="/personalCenter" class="my" tag="li" :class="{mySel:isMysel}" @click.native="mySel">
           <dl>
             <dt></dt>
             <dd class="f18 g9">我的</dd>
           </dl>
         </router-link>
-      </li>
     </ul>
   </footer>
 </template>
 
 <script>
   export default{
-
+    data(){
+      return{
+        notHome:false,
+        isMysel:false
+      }
+    },
+    methods:{
+      homeSel:function () {
+        this.notHome=false;
+        this.isMysel=false;
+      },
+      mySel:function () {
+        this.isMysel=true;
+        this.notHome=true;
+      }
+    }
   }
 </script>

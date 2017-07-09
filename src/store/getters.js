@@ -8,4 +8,11 @@ export default {
   centerShow:(state)=>{
     return state.center
   },
+  paymentShow:(state)=>{
+    return state.payment
+  },
+  editShow:(state)=>{
+    return state.edit
+  },
+
 }

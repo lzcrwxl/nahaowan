@@ -17,4 +17,16 @@ export default {
   hideCenter:({commit})=>{
     commit('hideCenter')
   },
+  showPayment:({commit})=>{
+    commit('showPayment')
+  },
+  hidePayment:({commit})=>{
+    commit('hidePayment')
+  },
+  showEdit:({commit})=>{
+    commit('showEdit')
+  },
+  hideEdit:({commit})=>{
+    commit('hideEdit')
+  },
 }

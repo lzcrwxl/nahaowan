@@ -3,9 +3,11 @@
     <div id="personalCenter" v-if="centerShow">
       <header>
         <div class="profile">
-          <img src="../../assets/images/profile.png" alt="" class="vm">
-          <span class="ml40 g3 f36 vm">桂花大哥</span>
-          <span class="f24 g9 r signIn">连续签到<i>&nbsp;8&nbsp;</i>天</span>
+          <router-link to="/personalCenter/editInfo" class="db profileWrapper">
+            <img src="../../assets/images/profile.png" alt="" class="vm">
+            <span class="ml40 g3 f36 vm">桂花大哥</span>
+            <span class="f24 g9 r signIn">连续签到<i>&nbsp;8&nbsp;</i>天</span>
+          </router-link>
         </div>
         <ul class="credits">
           <li class="f30 g3 pl30">
@@ -60,7 +62,7 @@
       $route(to){
         var path = to.path.substring(1);
         console.log(path)
-        if (path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected') {
+        if (path == 'personalCenter/myAct' || path == 'personalCenter/myShare' || path == 'personalCenter/feedback' || path == 'personalCenter/myCollected'|| path == 'personalCenter/editInfo'||path == 'personalCenter/editInfo/phone'||path == 'personalCenter/editInfo/nickname') {
           this.$store.dispatch('hideCenter')
         } else {
           this.$store.dispatch('showCenter')

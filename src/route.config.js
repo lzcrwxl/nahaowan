@@ -14,6 +14,13 @@ import myCol from './components/personalCenter/myCollected.vue'
 import myShare from './components/personalCenter/myShare.vue'
 import feedback from './components/personalCenter/feedback.vue'
 import myAct from './components/personalCenter/myAct.vue'
+import editInfo from './components/personalCenter/editInfo.vue'
+import Order from './components/order/order.vue'
+import Payment from './components/order/payment.vue'
+import paySucc from './components/order/paySuc.vue'
+import payFail from './components/order/payFail.vue'
+import Phone from './components/personalCenter/phone.vue'
+import Nickname from './components/personalCenter/nickname.vue'
 
 Vue.use(VueRouter)
 
@@ -72,8 +79,34 @@ const router = new VueRouter({
               path: 'feedback',
               component: feedback,
             },
+            {
+              path: 'editInfo',
+              component: editInfo,
+              children:[
+                {
+                  path: 'phone',
+                  component: Phone,
+                },
+                {
+                  path: 'nickname',
+                  component: Nickname,
+                },
+              ]
+            }
           ]
-        }
+        },
+        {
+          path: '/order',
+          component: Order
+        },
+        {
+          path: '/payment',
+          component: Payment,
+          children:[
+            {path:'paySucc',component:paySucc},
+            {path:'payFail',component:payFail},
+          ]
+        },
       ]
     }
 )

@@ -3,7 +3,9 @@ import getters from './getters'
 const state={
   header:true,
   footer:true,
-  center:true
+  center:true,
+  payment:true,
+  edit:true
 }
 const mutations={
   showHeader(state){
@@ -23,6 +25,18 @@ const mutations={
   },
   hideCenter(state){
     state.center=false
+  },
+  showPayment(state){
+    state.payment=true
+  },
+  hidePayment(state){
+    state.payment=false
+  },
+  showEdit(state){
+    state.edit=true
+  },
+  hideEdit(state){
+    state.edit=false
   }
 }
 export default {

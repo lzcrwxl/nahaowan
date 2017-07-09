@@ -10,8 +10,10 @@
     </div>
   </div>
 </template>
+<style lang="less" rel="stylesheet/less" scoped>
+  @import '../../assets/less/feedback.less';
+</style>
 <script>
-  import '../../assets/less/feedback.less'
   export default{
 
   }

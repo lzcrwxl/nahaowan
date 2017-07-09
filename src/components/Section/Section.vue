@@ -18,7 +18,6 @@
 </template>
 
 <script>
-  import Bus from '../../bus'
   import {mapGetters, mapActions} from 'vuex'
 
   export default{

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <BanHeader v-show="headerShow"></BanHeader>
+    <BanHeader v-if="headerShow"></BanHeader>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -14,6 +14,9 @@
   import FooterView from './components/footer/FooterView.vue'
   import {mapGetters, mapActions} from 'vuex'
 
+  const headPath={
+
+  }
   export default {
     computed: mapGetters([
       'headerShow',
@@ -33,14 +36,14 @@
     },
     methods:{
       headerChange(path){
-        if (path== 'personalCenter' || path == 'onSale/detail'||path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected') {
+        if (path== 'personalCenter' || path == 'onSale/detail'||path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected'||path == 'personalCenter/editInfo'||path == 'order'||path == 'payment'||path == 'payment/paySucc'||path == 'payment/payFail'||path=='personalCenter/editInfo/phone'||path == 'personalCenter/editInfo/nickname') {
           this.$store.dispatch('hideHeader')
         } else {
           this.$store.dispatch('showHeader')
         }
       },
       footerChange(path){
-        if (path == 'onSale/detail'||path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected') {
+        if (path == 'onSale/detail'||path == 'personalCenter/myAct'||path == 'personalCenter/myShare'||path == 'personalCenter/feedback'||path == 'personalCenter/myCollected'||path == 'personalCenter/editInfo'||path == 'order'||path == 'payment'||path == 'payment/paySucc'||path == 'payment/payFail'||path=='personalCenter/editInfo/phone'||path == 'personalCenter/editInfo/nickname') {
           this.$store.dispatch('hideFooter')
         } else {
           this.$store.dispatch('showFooter')

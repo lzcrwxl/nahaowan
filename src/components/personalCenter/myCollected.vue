@@ -43,8 +43,10 @@
     </section>
   </div>
 </template>
+<style lang="less" rel="stylesheet/less" scoped>
+  @import '../../assets/less/myshare.less';
+</style>
 <script>
-  import '../../assets/less/myshare.less'
   export default{
 
   }

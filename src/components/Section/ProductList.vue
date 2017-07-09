@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link class="showBox mt20" to="/onSale/detail" tag="div" v-show="seen" @click.native="switchShow">
+    <router-link class="showBox mt20" to="/onSale/detail" tag="div" v-show="headerShow">
       <a>
         <div class="background rel">
           <img src="../../assets/images/bg02.png" alt="">
@@ -33,19 +33,17 @@
 </template>
 
 <script>
-  import Bus from '../../bus'
+  import {mapGetters, mapActions} from 'vuex'
+
   export default{
     data(){
       return{
-        seen:true
       }
     },
     methods: {
-      switchShow:function () {
-        this.seen=!this.seen;
-        Bus.$emit('ok',this.seen);
-      }
     },
-    props:['hide']
+    computed: mapGetters([
+      'headerShow',
+    ]),
   }
 </script>
